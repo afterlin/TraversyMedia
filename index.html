@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample "Hello, World" Application</title>
+  </head>
+  <body bgcolor=white>
+     <h1>Hello There</h1>
+     <ul id="people"> </ul>
+     <script>
+        var person = {
+          "name":"Annabelle",
+          age: 6,
+          gender:"Female",
+          email: function(){
+            return "annalin@gmail.com";
+          },
+          address:{
+            street: "36 Winter st",
+            City:"Boulder",
+            State: "MA"
+          }
+        }
+          //person = JSON.stringify(person);
+          //person = JSON.parse(person);
+        //  console.log(person.address.City);
+
+        var people = [
+          {
+            name:"Angela",
+            age: 7
+          },
+          {
+            name: "Johnason",
+            age: 8
+          },
+          {
+            name: "Tom",
+            age: 14
+          }
+        ]
+        output='';
+        for (var i=0; i<people.length; i++){
+          //console.log(people[i].name);
+          output += '<li>' + people[i].name +':' + people[i].age+'</li>'
+        }
+        document.getElementById('people').innerHTML = output;
+
+     </script>
+  </body>
+</html>
